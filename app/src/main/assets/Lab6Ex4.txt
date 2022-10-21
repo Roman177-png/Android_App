@@ -1,0 +1,34 @@
+import org.w3c.dom.*;
+import javax.xml.parsers.*;
+import javax.xml.transform.dom.*;
+import javax.xml.transform.*;
+import javax.xml.transform.stream.*;
+import java.io.*;
+public class CreateNewDocumentDOM {
+    public static void main(String[] args) {
+        try {
+        DocumentBuilderFactory dbfactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = dbfactory.newDocumentBuilder();
+        Document document = builder.newDocument();
+        Element rootElement = document.createElement("addressbook");
+        rootElement.setAttribute("Att_Name","Att_Value");
+        document.appendChild(rootElement);
+        Element childElement1 = document.createElement("person");
+        childElement1.appendChild(document.createTextNode("JP"));
+        rootElement.appendChild(childElement1);
+        Element childElement2 = document.createElement("person");
+        childElement2.appendChild(document.createTextNode("JN"));
+        rootElement.appendChild(childElement2);
+        Comment comment = document.createComment("Comment");
+        rootElement.appendChild(comment);
+        DOMSource source = new DOMSource(document);
+        FileOutputStream fileoutput = new FileOutputStream(new
+        File("newDocument.xml"));
+        StreamResult result = new StreamResult(fileoutput);
+        TransformerFactory tfactory = TransformerFactory.newInstance();
+        Transformer transformer = tfactory.newTransformer();
+        transformer.transform(source, result);
+        System.out.println("Save: newDocument.xml");
+        } catch (Exception e) { e.printStackTrace(); }
+    }
+}

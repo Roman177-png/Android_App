@@ -1,0 +1,21 @@
+JMenuBar menuBar = new JMenuBar();
+JMenu menu1 = new JMenu("Menu1");
+…
+JMenuItem item12 = new JMenuItem("Menu12");
+JMenu item113 = new JMenu("Menu113");
+item113.add(new JMenuItem("Menu1131"));
+…
+menu11.add(new JMenuItem("Menu111"));
+menu11.add(new JMenuItem("Menu112"));
+menu11.add(item113);
+menu1.add(menu11);
+…
+menu2.add(new JCheckBoxMenuItem("CheckBox1"));
+…
+JMenuItem item1 = new JRadioButtonMenuItem("Radio1" , true);
+JMenuItem item2 = new JRadioButtonMenuItem("Radio2");
+ButtonGroup group = new ButtonGroup();
+…
+menuBar.add(menu1);
+…
+setJMenuBar(menuBar);

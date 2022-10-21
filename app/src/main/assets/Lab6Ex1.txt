@@ -1,0 +1,34 @@
+import javax.xml.parsers.*;
+import org.xml.sax.*;
+import org.xml.sax.helpers.*;
+import java.io.*;
+public class SAXSimpleDemo extends DefaultHandler {
+     public static void main(String[] arg) {
+        try {
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            SAXParser parser = factory.newSAXParser();
+            parser.parse(new File("SAXSimpleDemo.xml"), new SAXSimpleDemo());
+        } catch (Exception e) { e.printStackTrace(); }
+     }
+    public void startDocument() throws SAXException {
+         System.out.println("Start document");
+     }
+ public void startElement(String uri, String localName, String qName,
+ Attributes attrs) throws SAXException {
+     System.out.println("Start element: " + qName);
+     for(int i=0; i<attrs.getLength(); i++){
+         System.out.println("Attributes: " + attrs.getQName(i) +
+         "=" + attrs.getValue(i));
+    }
+ }
+ public void characters(char[] ch, int start, int length) throws SAXException {
+    System.out.println("Characters: " + new String(ch, start, length));
+ }
+ public void endElement(String uri, String localName, String qName) throws
+ SAXException {
+    System.out.println("End element: " + qName);
+ }
+ public void endDocument() throws SAXException {
+    System.out.println("End document");
+ }
+}

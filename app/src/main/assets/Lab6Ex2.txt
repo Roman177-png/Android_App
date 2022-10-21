@@ -1,0 +1,25 @@
+import javax.xml.parsers.*;
+import org.xml.sax.*;
+import org.xml.sax.helpers.*;
+import java.io.*;
+public class SAXError extends DefaultHandler {
+ public static void main(String[] args) {
+    try {
+        SAXParserFactory spfactory = SAXParserFactory.newInstance();
+         spfactory.setValidating(true);
+        SAXParser parser = spfactory.newSAXParser();
+        parser.parse(new File("saxerror.xml"), new SAXError());
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+ }
+ public void error(SAXParseException e){
+    System.out.println("Error in line: " + e.getLineNumber()+ " "+ e.getMessage());
+ }
+ public void fatalError(SAXParseException e){
+    System.out.println("FatalError in line: "+e.getLineNumber()+" "+e.getMessage());
+ }
+ public void warning(SAXParseException e){
+    System.out.println("Warning in line: "+e.getLineNumber()+" "+ e.getMessage());
+ }
+}

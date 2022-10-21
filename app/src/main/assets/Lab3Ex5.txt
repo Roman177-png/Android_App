@@ -1,0 +1,33 @@
+import javafx.application.Application;
+import javafx.event.EventHandler;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
+public class JavaFXKeyEvent extends Application {
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
+    @Override
+    public void start(Stage primaryStage) {
+        Group root = new Group();
+        Scene scene = new Scene(root, 300, 300);
+        TextField textBox = new TextField();
+        textBox.setOnKeyPressed(new EventHandler<KeyEvent>() {
+        public void handle(KeyEvent e) {
+            System.out.println("Key Pressed: " + e.getText() + " " + e.getCode()+
+                " "+ e.getEventType());
+         }
+     });
+     textBox.setOnKeyReleased(new EventHandler<KeyEvent>() {
+    public void handle(KeyEvent e) {
+        System.out.println("Key Released: " + e.getText()+ " " + e.getCode()+
+                " "+ e.getEventType());
+        }
+    });
+    root.getChildren().add(textBox);
+    primaryStage.setScene(scene);
+    primaryStage.show();
+    }
+}

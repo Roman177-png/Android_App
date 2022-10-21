@@ -1,0 +1,40 @@
+package jp.android;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import java.io.IOException;
+import java.io.InputStream;
+public class MainActivity extends Activity {
+    Button btn;
+    TextView txt;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        btn = (Button)findViewById(R.id.btnReadTxtFile);
+        txt = (TextView)findViewById(R.id.txtFile);
+        btn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String text = "";
+            try{
+                InputStream inputStream = getAssets().open("TextFile.txt");
+                int size = inputStream.available();
+                byte[] buffer = new byte[size];
+                inputStream.read(buffer);
+                inputStream.close();
+                text = new String(buffer);
+            } catch (IOException e) {
+                e.printStackTrace();
+             }
+             txt.setText(text);
+             Toast.makeText(getApplicationContext(),"Read successfully !",
+              Toast.LENGTH_SHORT).show();
+          }
+      });
+    }
+}

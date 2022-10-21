@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "question": "Określ nazwę katalogu, w którym przechowywane są pliki layout XML.",
+      "answer1": "/assets",
+      "answer2": "/src",
+      "answer3": "/res/values",
+      "answer4": "/res/layout",
+      "correct1": "/res/layout",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Czym jest aktywność w Androidzie?",
+      "answer1": "Aktywność wykonuje czynności na ekranie.",
+      "answer2": "Zarządza zawartością aplikacji.",
+      "answer3": "Interfejs użytkownika ekranu.",
+      "answer4": "Żadne z powyższych.",
+      "correct1": "Aktywność wykonuje czynności na ekranie.",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "APK oznacza - ",
+      "answer1": "Android Phone Kit",
+      "answer2": "Android Page Kit",
+      "answer3": "Android Package Kit",
+      "answer4": "Żadne z powyższych",
+      "correct1": "Android Package Kit",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Jak wstawić KOMENTARZE w kodzie Java?",
+      "answer1": "#This is a comment",
+      "answer2": "//This is a comment",
+      "answer3": "/*This is a comment",
+      "answer4": "/*This is a comment*/",
+      "correct1": "//This is a comment",
+      "correct2": "/*This is a comment*/",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Typy układów Androida",
+      "answer1": "LinearLayout",
+      "answer2": "RelativeLayout",
+      "answer3": "ScrollView",
+      "answer4": "Żadne z powyższych",
+      "correct1": "LinearLayout",
+      "correct2": "RelativeLayout",
+      "correct3": "ScrollView",
+      "correct4": ""
+    },
+    {
+      "question": "LayoutParams",
+      "answer1": "android:layout_below=\"@id/\"",
+      "answer2": "android:layout_height=\"50dp\"",
+      "answer3": "android:layout_marginStart=\"20dp\"",
+      "answer4": "android:layout_marginEnd=\"20dp\"",
+      "correct1": "android:layout_below=\"@id/\"",
+      "correct2": "android:layout_height=\"50dp\"",
+      "correct3": "android:layout_marginStart=\"20dp\"",
+      "correct4": "android:layout_marginEnd=\"20dp\""
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "question": "Które interfejsy zdefiniowane w pakiecie javax.servlet.http.",
+      "answer1": "HttpSession",
+      "answer2": "HttpServletRequest",
+      "answer3": "HttpServletResponse",
+      "answer4": "Żadne z powyższych",
+      "correct1": "HttpSession",
+      "correct2": "HttpServletRequest",
+      "correct3": "HttpServletResponse",
+      "correct4": ""
+    },
+    {
+      "question": "Które klasy zdefiniowane w pakiecie javax.servlet.http.",
+      "answer1": "Cookie",
+      "answer2": "HttpServlet",
+      "answer3": "Żadne z powyższych",
+      "answer4": "Session",
+      "correct1": "Cookie",
+      "correct2": "HttpServlet",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Które podejścia są poprawne w przypadku zwracania asynchronicznej odpowiedzi z zasobu JAX-RS?",
+      "answer1": "@GET\npublic String async(AsyncResponse res) {...}",
+      "answer2": "@GET\npublic CompletionStage<String> async() {...}",
+      "answer3": "@GET\npublic void async(@Suspended AsyncResponse res) {...}",
+      "answer4": "@GET\n@Suspended\npublic AsyncResponse async(@Context HttpServletResponse res) {...}",
+      "correct1": "@GET\npublic void async(@Suspended AsyncResponse res) {...}",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Jaka jest poprawna składnia do wyświetlania „Hello World” w Javie?",
+      "answer1": "echo(\"Hello World\");",
+      "answer2": "print(\"Hello World\");",
+      "answer3": "System.out.println(\"Hello World\");",
+      "answer4": "Console.WriteLine(\"Hello World\");",
+      "correct1": "System.out.println(\"Hello World\");",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Serwlet akcji, procesor żądań i klasy akcji są składnikami?",
+      "answer1": "Object",
+      "answer2": "Model",
+      "answer3": "Controller",
+      "answer4": "View",
+      "correct1": "Controller",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Która z poniższych metod może przechowywać obiekt w bazie danych w Hibernate?",
+      "answer1": "store()",
+      "answer2": "hibernate()",
+      "answer3": "save()",
+      "answer4": "saveorupdate ()",
+      "correct1": "save()",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    }
+
+  ]
+}

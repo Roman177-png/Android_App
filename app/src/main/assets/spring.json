@@ -1,0 +1,48 @@
+{
+  "questions": [
+    {
+      "question": "Co oznacza AOP?",
+      "answer1": "Aspect Oriented Programming",
+      "answer2": "Any Object Programming",
+      "answer3": "Asset Oriented Programming",
+      "answer4": "Asset Oriented Protocol",
+      "correct1": "Aspect Oriented Programming",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Jakie rodzaje iniekcji zależności obsługuje Spring?",
+      "answer1": "Constructor based, Setter based",
+      "answer2": "1Constructor based, 1Setter based",
+      "answer3": "Setter based, Getter based, Properties based",
+      "answer4": "Constructor based, Setter based, Properties based",
+      "correct1": "Constructor based, Setter based",
+      "correct2": "1Constructor based, 1Setter based",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Jak używać słowa kluczowego ref w ziarnach.",
+      "answer1": "Używając tylko metody setera.",
+      "answer2": "Używając tylko argumentu konstruktora.",
+      "answer3": "Używanie zarówno metody ustawiającej, jak i argumentu konstruktora.",
+      "answer4": "Żadne z powyższych.",
+      "correct1": "Używanie zarówno metody ustawiającej, jak i argumentu konstruktora.",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "W których wersji spring framework wprowadzono bean o zakresie wątku.",
+      "answer1": "3.0",
+      "answer2": "4.0",
+      "answer3": "3.1",
+      "answer4": "3.2",
+      "correct1": "3.0",
+      "correct2": "3.1",
+      "correct3": "3.2",
+      "correct4": ""
+    }
+  ]
+}

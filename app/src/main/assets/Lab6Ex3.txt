@@ -1,0 +1,32 @@
+import javax.xml.parsers.*;
+import org.w3c.dom.*;
+public class DOMgetDocumentNodes {
+    public static void main(String[] args) throws Exception {
+        Document document = DocumentBuilderFactory.newInstance()
+        .newDocumentBuilder()
+        .parse("addressbook.xml");
+        int i = 0;
+        Node rootNode = (Node)(document.getDocumentElement());
+        Node firstChild = rootNode.getFirstChild();
+        while (firstChild != null) {
+        if (!firstChild.getNodeName().equals("person")) {
+            firstChild = firstChild.getNextSibling();
+            continue;
+        }
+       i++;
+        Node nameNode = firstChild.getFirstChild();
+            while (nameNode != null) {
+                if (!nameNode.getNodeName().equals("name")) {
+                    nameNode = nameNode.getNextSibling();
+                    continue;
+                }
+        Node node = nameNode.getFirstChild();
+             if (node != null) {
+                 System.out.println(i + " Name: " + node.getNodeValue());
+            }
+        break;
+    }
+    firstChild = firstChild.getNextSibling();
+    }
+   }
+}

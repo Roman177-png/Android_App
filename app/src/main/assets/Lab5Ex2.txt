@@ -1,0 +1,40 @@
+package jp;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+@WebServlet(name = "Quiz", urlPatterns = {"/Quiz"})
+public class Quiz extends HttpServlet {
+     protected void processRequest(HttpServletRequest request, HttpServletResponse
+    response)
+    throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
+        String q1 = request.getParameter("q1");
+        String q2 = request.getParameter("q2");
+        String q3 = request.getParameter("q3");
+        String q4 = request.getParameter("q4");
+        if (q1.equals("EJB")) {
+            out.println("Pytanie 1 - " + "OK");
+        } else {
+            out.println("Pytanie 1 - " + "NO");
+        }
+        if (q2.equals("WEB")) {
+            out.println("Pytanie 2 - " + "OK");
+        } else {
+            out.println("Pytanie 2 - " + "NO");
+         }
+    }
+ @Override
+ protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+        processRequest(request, response);
+    }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+    processRequest(request, response);
+    }
+}

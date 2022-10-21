@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "question": "Wszystkie aplikacje JavaFx muszą extend",
+      "answer1": "Application class",
+      "answer2": "Scene class",
+      "answer3": "Stage class",
+      "answer4": "Platform class",
+      "correct1": "Application class",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Który jest punktem wejścia każdej aplikacji javafx?",
+      "answer1": "Stage class",
+      "answer2": "Scene class",
+      "answer3": "start method",
+      "answer4": "Application class",
+      "correct1": "start method",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Które jest identyfikowane jako  Direct Known Subclasses w javafx",
+      "answer1": "ButtonBar",
+      "answer2": "ChoiceBox",
+      "answer3": "Skinnable",
+      "answer4": "Zadna odpowiedz nie poprawna",
+      "correct1": "ButtonBar",
+      "correct2": "ChoiceBox",
+      "correct3": "",
+      "correct4": ""
+    },
+    {
+      "question": "Pakiety JavaFx",
+      "answer1": "javafx.animation",
+      "answer2": "javafx.application",
+      "answer3": "javafx.beans",
+      "answer4": "javafx.collections",
+      "correct1": "javafx.animation",
+      "correct2": "javafx.application",
+      "correct3": "javafx.beans",
+      "correct4": "javafx.collections"
+    },
+    {
+      "question": "JavaFx służy do",
+      "answer1": "Aplikacje Java GUI,",
+      "answer2": "Wykresy 2D i 3D,",
+      "answer3": "Gry",
+      "answer4": "Wszystko",
+      "correct1": "Wszystko",
+      "correct2": "",
+      "correct3": "",
+      "correct4": ""
+    }
+  ]
+}
